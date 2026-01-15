@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLAZA SMP</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #6d28d9, #22c55e);
+    }
+    .glow {
+      text-shadow: 0 0 12px rgba(255,255,255,0.7);
+    }
+  </style>
+</head>
+<body class="h-screen overflow-hidden text-white">
+
+  <!-- SERVER STATUS BAR -->
+  <div id="statusBar" class="w-full text-center py-2 font-semibold bg-gray-600">
+    Checking server status...
+  </div>
+
+  <!-- NAV -->
+  <nav class="flex justify-between items-center px-6 py-4">
+    <h1 class="text-2xl font-bold glow">PLAZA SMP</h1>
+    <div class="space-x-6">
+      <button onclick="showTab('home')" class="hover:underline">Home</button>
+      <button onclick="showTab('events')" class="hover:underline">Events</button>
+      <button onclick="showTab('join')" class="hover:underline">Join</button>
+      <button onclick="showTab('youtube')" class="hover:underline">YouTube</button>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="h-[calc(100vh-120px)] flex items-center justify-center">
+
+    <!-- HOME TAB -->
+    <section id="home" class="tab w-full max-w-6xl px-6">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="text-center md:text-left">
+          <h2 class="text-5xl font-extrabold glow mb-6">PLAZA SMP</h2>
+          <p class="text-xl mb-4">
+            A competitive Lifesteal PvP Minecraft server where every fight matters.
+          </p>
+          <p class="text-gray-200">
+            Kill players to steal hearts, form alliances, betray enemies, and rise to the top.
+            No resets, real progression, real consequences.
+          </p>
+          
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <div class="bg-black/30 px-6 py-4 rounded-xl">
+              <h4 class="text-lg font-semibold">Lifesteal</h4>
+              <p class="text-sm text-gray-200">Gain hearts from PvP kills</p>
+            </div>
+            <div class="bg-black/30 px-6 py-4 rounded-xl">
+              <h4 class="text-lg font-semibold">PvP Focused</h4>
+              <p class="text-sm text-gray-200">Combat is always enabled</p>
+            </div>
+            <div class="bg-black/30 px-6 py-4 rounded-xl">
+              <h4 class="text-lg font-semibold">Events</h4>
+              <p class="text-sm text-gray-200">Frequent server-wide events</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <img src="plazaSmp.png" class="mx-auto w-64 rounded-xl shadow-2xl" />
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS TAB -->
+    <section id="events" class="tab hidden w-full max-w-6xl px-6">
+      <h3 class="text-4xl font-bold mb-10 glow text-center">Events</h3>
+
+      <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-black/30 p-6 rounded-2xl shadow-xl">
+        <h4 class="text-2xl font-semibold">Lifesteal PvP </h4>
+        <p class="mt-2 text-gray-200">All-out PvP. Hearts are on the line.</p>
+        <span class="text-green-400 font-semibold">Upcoming</span>
+        </div>
+
+        <div class="bg-black/30 p-6 rounded-2xl shadow-xl">
+        <h4 class="text-2xl font-semibold">Netherite Sword Event</h4>
+        <p class="mt-2 text-gray-200">Teams clash for new weapons</p>
+        <span class="text-yellow-300 font-semibold">Soon</span>
+        </div>
+
+        <div class="bg-black/30 p-6 rounded-2xl shadow-xl">
+          <h4 class="text-2xl font-semibold">Bounty Weekend</h4>
+          <p class="mt-3 text-gray-200">High-value players earn bounties.</p>
+          <span class="text-blue-300 font-semibold">Planned</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOIN TAB -->
+    <section id="join" class="tab hidden w-full max-w-4xl px-6 text-center">
+      <h3 class="text-4xl font-bold glow mb-8">Join PLAZA SMP</h3>
+
+      <div class="bg-black/30 p-8 rounded-2xl shadow-xl mb-6">
+        <p class="text-xl mb-2">Server Address</p>
+        <p class="font-mono text-lg">plaza.indigloteck.online</p>
+        <p class="font-mono">Port: 25569</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-black/30 p-6 rounded-xl">
+          <h4 class="font-semibold">Java Edition</h4>
+          <p class="text-sm text-gray-200">1.21.11 Updates Fast!</p>
+        </div>
+        <div class="bg-black/30 p-6 rounded-xl">
+          <h4 class="font-semibold">24/7 Uptime</h4>
+          <p class="text-sm text-gray-200">Always online, always PvP</p>
+        </div>
+        <div class="bg-black/30 p-6 rounded-xl">
+          <h4 class="font-semibold">Active Community</h4>
+          <p class="text-sm text-gray-200">Events and player-driven wars</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- YOUTUBE TAB -->
+    <section id="youtube" class="tab hidden w-full max-w-5xl px-6 text-center">
+      <h3 class="text-4xl font-bold glow mb-8">PLAZA SMP Videos</h3>
+
+      <!-- Video Grid (easy to add more) -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-black/30 p-4 rounded-2xl shadow-xl">
+          <div class="aspect-video w-full rounded-xl overflow-hidden">
+            <iframe
+    class="w-full h-full"
+    src="https://www.youtube.com/embed/48NTpow8LiE?start=107&rel=0"
+    title="PLAZA SMP Video"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+</iframe>
+          </div>
+          <p class="mt-4 text-gray-200">PLAZA SMP Lifesteal PvP Gameplay</p>
+        </div>
+      </div>
+
+      <p class="mt-6 text-sm text-gray-300">
+       <!-- FOOTER -->
+  <p>
+    © 2026 PLAZA SMP — Lifesteal PvP Server
+  
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-4 text-gray-200">
+    © 2026 PLAZA SMP — Lifesteal PvP Server
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    async function checkServer() {
+      const bar = document.getElementById('statusBar');
+      try {
+        const res = await fetch('https://api.mcsrvstat.us/3/plaza.indigloteck.online:25569');
+        const data = await res.json();
+
+        if (data.online === true) {
+          bar.textContent = 'Server Online';
+          bar.className = 'w-full text-center py-2 font-semibold bg-green-600';
+        } else {
+          bar.textContent = 'Server Offline';
+          bar.className = 'w-full text-center py-2 font-semibold bg-red-600';
+        }
+      } catch {
+        bar.textContent = 'Server status unavailable';
+        bar.className = 'w-full text-center py-2 font-semibold bg-yellow-600';
+      }
+    }
+
+    function showTab(tabId) {
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.add('hidden'));
+      document.getElementById(tabId).classList.remove('hidden');
+    }
+
+    checkServer();
+    setInterval(checkServer, 30000);
+  </script>
+
+</body>
+</html>
